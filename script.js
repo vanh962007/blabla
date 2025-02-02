@@ -1,5 +1,5 @@
 const messages = [
-    "Chị Chắc Chưa?",
+   "Chị Chắc Chưa?",
     "Chị Chắc Chắn Chưa??",
     "Chị Có Chắc Chắn Chưa?",
     "100% Chưa?.",
@@ -14,12 +14,12 @@ const messages = [
 let messageIndex = 0;
 
 function handleNoClick() {
-    const KhôngButton = document.querySelector('.Không-button');
-    const ĐồngÝButton = document.querySelector('.ĐồngÝ-button');
-    KhôngButton.textContent = messages[messageIndex];
+    const noButton = document.querySelector('.no-button');
+    const yesButton = document.querySelector('.yes-button');
+    noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
-    const currentSize = parseFloat(window.getComputedStyle(ĐồngÝButton).fontSize);
-    ĐồngÝButton.style.fontSize = `${currentSize * 1.5}px`;
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1.5}px`;
 }
 
 function handleYesClick() {
